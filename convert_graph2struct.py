@@ -20,7 +20,7 @@ def parse_transitions(text):
                 "to": match.group(3).strip()
             })
         else:
-            print(f"[未匹配] {repr(line)}")
+            print(f"{repr(line)}")
     
     return transitions
 
