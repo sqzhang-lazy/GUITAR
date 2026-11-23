@@ -8,7 +8,7 @@ import torch
 
 from transformers import AutoProcessor
 from qwen_vl_utils import process_vision_info
-from prompt2 import *
+from prompt import MAP_SCREEN_TO_STATES_MOBILE_PROMPT
 from vllm import LLM, SamplingParams
 
 

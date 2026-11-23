@@ -29,7 +29,7 @@ except ModuleNotFoundError:
     )
     smart_resize = None
 import re
-from prompt import *
+from prompt import SUMMARY_CURRENT_SCREEN_GUIDELINE, SUMMARY_CURRENT_SCREEN_PROMPT
 from tqdm import tqdm
 
 

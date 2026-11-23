@@ -133,7 +133,7 @@ The captioning script writes `./<app>/qwen_output_screen_summary_collect.json`, 
 
 ## Run the pipeline
 
-The examples below use `Maps` as the application name. Complete the configuration above and supply the missing captioning prompts before starting Stage 1.
+The examples below use `Maps` as the application name. Complete the configuration above before starting Stage 1. All required prompts are included in [`prompt.py`](prompt.py), and each pipeline script imports its required definitions directly from this shared file.
 
 Stages 1–5 construct and align the STG; Step 6 post-processes the resulting annotations.
 
@@ -250,12 +250,12 @@ androidcontrol/state_action_summary/Maps_state_action_summary.json
 | [`map_screen_to_state_ac.py`](map_screen_to_state_ac.py) | Stage 5: map individual screenshots to functional states. |
 | [`organize_node_and_edge_w_original_data_ac.py`](organize_node_and_edge_w_original_data_ac.py) | Attach the state assignments to the original trajectory records. |
 | [`state_action_summary_ac.py`](state_action_summary_ac.py) | Aggregate actions and screenshots for each observed state transition. |
-| [`prompt2.py`](prompt2.py) | Prompts used for trajectory abstraction, graph aggregation, reconstruction, and state assignment. |
+| [`prompt.py`](prompt.py) | Prompts used for screen captioning, trajectory abstraction, graph aggregation, reconstruction, and state assignment. |
 
 
 ## Release notes
 
-- [`qwen_collect_screen_information_ac.py`](qwen_collect_screen_information_ac.py) imports `prompt.py`, which must define `SUMMARY_CURRENT_SCREEN_PROMPT` and `SUMMARY_CURRENT_SCREEN_GUIDELINE`. This captioning prompt file is not included in the current snapshot; [`prompt2.py`](prompt2.py) contains the prompts for Stages 2--5.
+- All prompt definitions are included in [`prompt.py`](prompt.py), including `SUMMARY_CURRENT_SCREEN_PROMPT` and `SUMMARY_CURRENT_SCREEN_GUIDELINE` for screen captioning and the prompts for Stages 2--5.
 - The scripts preserve the paths used in the original experiments. Harmonizing the path constants is required when using a new directory layout.
 - The AndroidControl pipeline is the most complete path in this release. [`convert_graph2struct.py`](convert_graph2struct.py) recognizes the Mind2Web sites `booking`, `carmax`, and `kayak`, but the surrounding scripts still require their roots and mobile/web prompts to be configured explicitly.
 - The outputs after Stage 5 are fully automatic. The post-hoc manual verification used for selected analyses in the paper is not implemented as an automated script.

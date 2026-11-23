@@ -11,7 +11,7 @@ import torch
 
 from transformers import AutoProcessor
 from qwen_vl_utils import process_vision_info
-from prompt2 import *
+from prompt import TRAJECTORY_TO_STATE_TRANSITION_BY_GRAPH_MOBILE_PROMPT
 import argparse
 
 from vllm import LLM, SamplingParams

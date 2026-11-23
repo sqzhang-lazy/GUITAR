@@ -11,7 +11,7 @@ import re
 from transformers import AutoProcessor
 import torch
 from qwen_vl_utils import process_vision_info
-from prompt2 import *
+from prompt import MERGE_TRAJECTORY_MOBILE_PROMPT
 import argparse
 
 from vllm import LLM, SamplingParams

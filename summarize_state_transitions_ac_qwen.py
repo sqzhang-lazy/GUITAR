@@ -9,7 +9,7 @@ from tqdm import tqdm
 from pathlib import Path
 from string import Template
 
-from prompt2 import *
+from prompt import MERGE_NODE_BY_TRAJECTORY_MOBILE_PROMPT
 
 from vllm import LLM, SamplingParams
 import torch
