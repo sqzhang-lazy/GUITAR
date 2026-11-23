@@ -266,14 +266,11 @@ androidcontrol/state_action_summary/Maps_state_action_summary.json
 If you find GUITAR useful in your research, please cite the [paper](https://arxiv.org/abs/2609.34113):
 
 ```bibtex
-@misc{zhang2026guitar,
-  title         = {{GUITAR}: Structured Failure Diagnosis of {GUI} Agents via State Transitions},
-  author        = {Shaoqing Zhang and Kehai Chen and Xuefeng Bai and Zhuosheng Zhang and Pengfei Zhang and Yang Xiang and Min Zhang},
-  year          = {2026},
-  eprint        = {2609.34113},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.AI},
-  url           = {https://arxiv.org/abs/2609.34113}
+@article{zhang2026guitar,
+  title={GUITAR: Structured Failure Diagnosis of GUI Agents via State Transitions},
+  author={Zhang, Shaoqing and Chen, Kehai and Bai, Xuefeng and Zhang, Zhuosheng and Zhang, Pengfei and Xiang, Yang and Zhang, Min},
+  journal={arXiv preprint arXiv:2609.34113},
+  year={2026}
 }
 ```
 
